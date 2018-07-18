@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - stable
+
+branches:
+  only:
+    - master
+
+before_script:
+  - npm install
+
+script:
+  - npm run build
+deploy:
+  provider: surge
+  project: ./dist/parent-aps-assessment
+  domain: parent-pa.surge.sh
+  token: b5ed1767191534ce771f774835c92657
+  skip_cleanup: true
