@@ -8,7 +8,7 @@ WORKDIR /home/nodejs/app
 COPY . .
 RUN npm install
 
-CMD ["node", "index.js", "add", "1", "ahmed1"]
-CMD ["node", "index.js", "add", "2", "ahmed2"]
-CMD ["node", "index.js", "add", "4", "ahmed3"]
-CMD ["node", "index.js", "list"]
+CMD ["node", "store.js", "add", "1", "ahmed1"]
+CMD ["node", "store.js", "add", "2", "ahmed2"]
+CMD ["node", "store.js", "add", "4", "ahmed3"]
+CMD ["node", "store.js", "list"]

@@ -10,6 +10,6 @@ before_script:
   - npm install
 
 script:
-  - node index.js add 1 ahmed
-  - node index.js list
+  - node store.js add 1 ahmed
+  - node store.js list
 
