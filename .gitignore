@@ -28,6 +28,7 @@ testem.log
 package-lock.json
 yarn.lock
 /typings
+.nyc_output/
 
 # System Files
 .DS_Store
