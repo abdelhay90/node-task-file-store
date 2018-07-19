@@ -28,7 +28,7 @@ describe('Store pairs', function () {
 
     it('should get key', function () {
         const command = CommandFactory.getCommand(COMMANDS.GET);
-        console.log(command.execute(['99']));
+        expect(command.execute(['99'])).to.equal('99 -> ahmed');
     });
 
     it('should give not existing key', function () {
@@ -45,12 +45,18 @@ describe('Store pairs', function () {
 
     it('should list key', function () {
         const command = CommandFactory.getCommand(COMMANDS.LIST_ALL);
-        console.log(command.execute([]));
+        expect(command.execute([])).to.equal(
+            `99 ; ahmed
+200 ; ahmed
+201 ; ahmed
+202 ; ahmed
+`
+        );
     });
 
     it('should remove key', function () {
         const command = CommandFactory.getCommand(COMMANDS.REMOVE);
-        console.log(command.execute(['99']));
+        expect(command.execute(['99'])).to.equal(MESSAGES.REMOVED_SUCCESSFULLY);
     });
 
     it('should not remove key without key', function () {
@@ -62,7 +68,7 @@ describe('Store pairs', function () {
 
     it('should clear key', function () {
         const command = CommandFactory.getCommand(COMMANDS.CLEAR_ALL);
-        console.log(command.execute([]));
+        expect(command.execute([])).to.equal(MESSAGES.SUCCESSFULLY_CLEARED);
     });
 
     it('should throw error on wrong command key', function () {
