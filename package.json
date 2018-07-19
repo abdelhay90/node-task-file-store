@@ -2,10 +2,10 @@
   "name": "store",
   "version": "1.0.0",
   "description": "creating file store to read and save key value pairs",
-  "main": "store.js",
+  "main": "index.js",
   "preferGlobal": "true",
   "bin": {
-    "store": "./store.js"
+    "store": "./index.js"
   },
   "scripts": {
     "clean": "rimraf lib/store.data",
